@@ -1,0 +1,11 @@
+<div class="standard">
+
+<h2>All Athletes</h2>
+<% @athlete.each do |athlete| %>
+
+<h2><%=athlete['name'].capitalize!%></h2>
+<% end %>
+
+<a href="/">Home</a>
+
+</div>

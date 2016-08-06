@@ -1,0 +1,28 @@
+<div class ='standard'>
+
+<form method="get">
+  Search Event
+  <input name="search" value="" type="text" />
+  <input type="submit" value="search"/>
+</form>
+<br>
+
+
+
+<% if @events.count > 0 %>
+
+<% @events.each do |event| %>
+
+  <%= event.event.capitalize! %>
+  <a href="/events/<%=event.id%>/edit">Edit</a>
+  <a href="/events/<%=event.id%>/delete">Delete</a>
+
+
+  <br>
+  <% end %>
+
+  <% else %>
+  <p>No matching event</p>
+  <% end %>
+
+</div>

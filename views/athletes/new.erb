@@ -1,0 +1,24 @@
+
+
+
+
+<div class='standard'>
+<h2>Add Athlete</h2>
+<form action="/athletes" method="post">
+<br>
+<label for="name">Athlete:</label>
+<input type="text" name="name">
+<label for='event'>Event:</label>
+<select name='event_id'>
+<% @event.each do |event|  %>
+<option value="<%=event.id%>"><%=event.event%></option>
+<%end%>
+</select>
+<select name='nation_id'>
+<% @nation.each do |nation|  %>
+<option value="<%=nation.id%>"><%=nation.nation%></option>
+<%end%>
+</select>
+<input type="submit" value="Add Athlete">
+</form>
+</div>

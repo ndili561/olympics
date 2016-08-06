@@ -1,0 +1,29 @@
+
+<div class ='standard'>
+<form method="get">
+  Search Nation
+  <input name="search" value="" type="text">
+  <input type="submit" value="search">
+</form>
+<br>
+
+
+<% if @nations.count > 0 %>
+
+<% @nations.each do |nation| %>
+
+  <%= nation.nation.capitalize! %>
+  <a href="/nations/<%=nation.id%>/edit">Edit</a>
+  <a href="/nations/<%=nation.id%>/delete">Delete</a>
+
+
+  <br>
+  <% end %>
+
+  <% else %>
+  <p>No matching nations</p>
+  <% end %>
+
+  </div>
+
+

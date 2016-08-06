@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<title>Olympic Games</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Itim" rel="stylesheet">
+</head>
+<body>
+<nav id="navigation-bar">
+  <ul>
+  <li>
+    <a href='/' class='link'>Home</a>
+  </li>
+    <li>
+      <a href="/nations/new" class="link">New Nation</a>
+    </li>
+    <li>
+      <a href="/events/new" class="link">New Event</a>
+    </li>
+    <li>
+      <a href="/athletes/new" class="link">New Athlete</a>
+    </li>
+    <li>
+      <a href="/nations" class="link">Nations</a>
+    </li>
+    <li>
+      <a href="/events" class="link">Events</a>
+    </li>
+    <li>
+      <a href="/medals" class="link">Medals</a>
+    </li>
+  </ul>
+</nav>
+<main>
+<%= yield %>
+</main>
+</body>
+<footer>
+  <div class="copyright">
+   <h3> <p class>&copy 2016 - Nicola Di Lillo</p><p>About</p><p>Portfolio</p></h3>
+  </div>
+  <div class="social">
+    <a href="https://github.com/ndili561" class="linked"><span><i class="fa fa-github"></i></span></a>
+    <a href="#" class="linked"><span><i class="fa fa-linkedin"></i></span></a>
+    <a href="#" class="linked"><span><i class="fa fa-twitter"></i></span></a>
+    <a href="#" class="linked"><span><i class="fa fa-facebook"></i></span></a>
+  </div>
+</footer>
+</html>

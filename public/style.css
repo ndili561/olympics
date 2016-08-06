@@ -1,0 +1,79 @@
+@import "compass/css3";
+/*@import url(http://fonts.googleapis.com/css?family=Raleway);*/
+
+html{
+  background-image: url('photo2.jpg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Itim', cursive;
+  height: auto;
+
+
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 20PX;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #205D7A;
+  color: white;
+  margin: 0 10px;
+  padding: 5px 15px;
+}
+
+nav a:hover {
+  background-color: grey;
+}
+
+nav {
+  padding: 10px;
+}
+
+.copyright{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+.social{
+  float: right;
+  margin-top: -80PX;
+  margin-right: 60px;
+}
+
+
+
+.social a i {
+  background: #205D7A;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 25px;
+  text-align: center;
+  margin-right: 10px;
+  padding-top: 8%;
+}
+
+footer{
+  margin-bottom: 10px;
+}
+
+
+.standard{
+  text-align: center;
+  color:#205D7A;
+  padding-top: 60px;
+
+}
+
+.copyright{
+  color:#205D7A;
+}
+
+
+
+
+

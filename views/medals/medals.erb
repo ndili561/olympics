@@ -1,0 +1,47 @@
+
+
+
+
+
+
+<%# Accepatance test plan User interaction  %>
+<div class='standard'>
+<h3>Select athletes to add medal</h3>
+<form action='/medals' method='post'>
+<select name='event'>Event
+<% @event.each do |event|   %><br>
+<option value="<%=event.event%>"><%=event.event%></option>
+<%end%>
+<br>
+</select>
+
+<label for="gold_medal_athlete">Gold:</label>
+<select name='gold_medal_athlete'>
+<% @athlete.each do |athlete|  %>
+<option value="<%=athlete['id']%>"><%=athlete['name']%></option>
+<%end%>
+<br>
+</select>
+
+<label for="silver_medal_athlete">Silver:</label>
+<select name='silver_medal_athlete'>
+<% @athlete.each do |athlete|  %>
+<option value="<%=athlete['id']%>"><%=athlete['name']%></option>
+<%end%>
+</select>
+
+
+<label for="bronze_medal_athlete">Bronze:</label>
+<select name='bronze_medal_athlete'>
+<% @athlete.each do |athlete| %>
+<option value="<%=athlete['id']%>"><%=athlete["name"]%></option>
+<%end%>
+</select>
+
+<input type="submit" value="Add to medal collection">
+</form>
+</div>
+
+
+
+

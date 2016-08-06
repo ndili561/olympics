@@ -1,0 +1,13 @@
+
+
+<div class="standard">
+<h3>Edit Event</h3>
+
+<form action="/events/<%=@event.id%>" method='post'>
+<input type="hidden" name="_method" value="put">
+  <%=@event.event.capitalize %><br>
+  <label for="name">Event:</label>
+  <input type="text" name='event' value='<%@event.event %>'></br>
+  <input type="submit" value="Update Event">
+</form>
+</div>

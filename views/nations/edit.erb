@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/confirm.css">
+
+<div class="standard">
+<h2>Edit Nation</h2>
+
+<form action="/nations/<%=@nation.id%>" method='post'>
+  <input type="hidden" name="_method" value="put">
+  <%=@nation.nation.capitalize %><br>
+  <label for="name">Nation:</label>
+  <input type="text" name="nation" value="<%@nation.nation %>"></br>
+  <input type="submit" value="Update Nation">
+</form>
+</div>
