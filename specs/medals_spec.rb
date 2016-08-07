@@ -62,9 +62,36 @@ class TestMedals_collection < Minitest::Test
    @athlete3.save()
    Medal.update_medal(@medal)
    result = Medal.nations()
-   binding.pry
-   assert_equal(5, @nation.point)
+   assert_equal('5', result[0]['points'])
  end
+
+ # # def test_add_3_point
+ # #  @nation.save()
+ # #  @nation2.save()
+ # #  @nation3.save()
+ # #  @event1.save()
+ # #  @athlete.save()
+ # #  @athlete2.save()
+ # #  @athlete3.save()
+ # #  Medal.update_medal(@medal)
+ # #  result = Medal.nations()
+ # #  assert_equal('3', result[1]['points'])
+ # # end
+
+
+ # # def test_add_1_point
+ # #  @nation.save()
+ # #  @nation2.save()
+ # #  @nation3.save()
+ # #  @event1.save()
+ # #  @athlete.save()
+ # #  @athlete2.save()
+ # #  @athlete3.save()
+ # #  Medal.update_medal(@medal)
+ # #  result = Medal.nations()
+ # #  assert_equal('1', result[2]['points'])
+ # end
+
 
 end
 

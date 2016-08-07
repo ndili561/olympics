@@ -12,10 +12,6 @@ class Medal
     @gold_medal_athlete_id=options['gold_medal_athlete'].to_i
     @silver_medal_athlete_id=options['silver_medal_athlete'].to_i
     @bronze_medal_athlete_id=options['bronze_medal_athlete'].to_i
-    # @gold_medal=options['gold_medal_athlete'].to_i
-    # @silver_medal=options['silver_medal_athlete'].to_i
-    # @bronze_medal=options['bronze_medal_athlete'].to_i
-
   end
 
 
@@ -39,18 +35,18 @@ class Medal
     points='#{params['points']}' WHERE id=#{params['id']}")
   end
 
- def self.update_medal(params)
-  sql = "select * from nations"
-  nation=run(sql)
-  result=nation.to_a
-  result.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_i}}
-  result.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_i}}
-  result.each do |x|
-    if x['id']==params.gold_medal_athlete_id
-      x['points']+=5
+  def self.update_medal(params)
+    sql = "select * from nations"
+    nation=run(sql)
+    result=nation.to_a
+    result.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_i}}
+    result.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_i}}
+    result.each do |x|
+      if x['id']==params.gold_medal_athlete_id
+        x['points']+=5
     # elsif 
-    end
-end
+      end
+ end
 result.each do |res|
   if res['id']==params.silver_medal_athlete_id
     res['points']+=3
@@ -66,22 +62,20 @@ result.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_s}}
 result.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_s}}
 
 result.each do |nat|
-Medal.update(nat)
-binding.pry
+  Medal.update(nat)
 end
 Medal.sort(result)
- end
+  end
 
 
 
 
 
-def self.sort(params)
- sort = params.to_a
- sort.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_i}}
- sort.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_i}}
- points=sort.sort_by{|value|-value['points']}
- return points
-
-end
+  def self.sort(params)
+   sort = params.to_a
+   sort.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_i}}
+   sort.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_i}}
+   points=sort.sort_by{|value|-value['points']}
+   return points
+  end
 end
