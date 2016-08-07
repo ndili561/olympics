@@ -64,11 +64,16 @@ result.each do |r|
 end
 result.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_s}}
 result.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_s}}
-result.each do |t|
-  Medal.update(t)
-  return Medal.sort(result)
-   end
+
+result.each do |nat|
+Medal.update(nat)
+binding.pry
+end
+Medal.sort(result)
  end
+
+
+
 
 
 def self.sort(params)
@@ -77,5 +82,6 @@ def self.sort(params)
  sort.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_i}}
  points=sort.sort_by{|value|-value['points']}
  return points
+
 end
 end

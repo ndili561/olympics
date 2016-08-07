@@ -17,6 +17,7 @@ post '/medals' do
   @medal=Medal.new(params)
   @medal.save()
   @medal2=Medal.update_medal(@medal)
+  binding.pry
   erb :'medals/ranking'
 end
 

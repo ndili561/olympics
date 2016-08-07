@@ -60,7 +60,9 @@ class TestMedals_collection < Minitest::Test
    @athlete.save()
    @athlete2.save()
    @athlete3.save()
-   Medal.update_medal(@nation)
+   Medal.update_medal(@medal)
+   result = Medal.nations()
+   binding.pry
    assert_equal(5, @nation.point)
  end
 

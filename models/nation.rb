@@ -20,8 +20,8 @@ def save()
   sql = "INSERT INTO nations(nation,points)VALUES ('#{@nation}', '#{@point}')RETURNING *"
   nation=run(sql)
   @id = nation.first['id'].to_i
- rescue
-end
+  rescue
+    end
 end
 
   def self.all(query = "")
@@ -47,7 +47,7 @@ end
 
   def self.update(params)
    run ( "UPDATE nations SET 
-    nation='#{params['nation']}' WHERE id=#{params['id']}")
+    nation='#{params['nation']}', points='#{params['points']}' WHERE id=#{params['id']}")
   end
 
   def self.find(id)
@@ -60,6 +60,8 @@ end
   def self.delete(id)
     run("DELETE FROM nations WHERE id=#{id}")
   end
+
+ 
 
 end
 
