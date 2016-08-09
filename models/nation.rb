@@ -1,6 +1,7 @@
 require('pg')
 require_relative('../db/sql_runner')
 require('pry-byebug')
+require 'json/ext'
 
 class Nation
   
@@ -61,6 +62,11 @@ end
     run("DELETE FROM nations WHERE id=#{id}")
   end
 
+  def self.json()
+    sql = "SELECT * FROM nations"
+    result = run(sql)
+    return result
+  end
  
 
 end
