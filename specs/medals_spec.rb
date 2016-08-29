@@ -4,7 +4,7 @@ require_relative('../models/athlete')
 require_relative('../models/nation')
 require_relative('../models/event')
 require_relative('../models/medals')
-require('pry-byebug')
+
 
 class TestMedals_collection < Minitest::Test
 

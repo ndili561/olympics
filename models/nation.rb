@@ -1,6 +1,5 @@
 require('pg')
 require_relative('../db/sql_runner')
-require('pry-byebug')
 require 'json/ext'
 
 class Nation

@@ -11,8 +11,8 @@ get '/' do
 end
 
 get '/toJSON' do
-   @nation = Nation.json();
-   @nation.to_a
-    content_type :json
-    @nation.to_a.to_json
+ @nation = Nation.json();
+ @nation.to_a
+ content_type :json
+ @nation.to_a.to_json
 end

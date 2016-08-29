@@ -1,6 +1,6 @@
 require('pg')
 require_relative('nation')
-require('pry-byebug')
+
 
 class Athlete
 

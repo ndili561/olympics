@@ -1,5 +1,4 @@
 require('pg')
-require('pry-byebug')
 require_relative('event')
 require_relative('nation')
 
@@ -46,30 +45,25 @@ class Medal
         x['points']+=5
     # elsif 
       end
- end
-result.each do |res|
+    end
+  result.each do |res|
   if res['id']==params.silver_medal_athlete_id
     res['points']+=3
     # elsif 
   end
-end
-result.each do |r|
+  end
+  result.each do |r|
   if r['id']==params.bronze_medal_athlete_id
     r['points']+=1
   end
-end
-result.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_s}}
-result.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_s}}
-
-result.each do |nat|
-  Medal.update(nat)
-end
-Medal.sort(result)
   end
-
-
-
-
+  result.each {|h| h.each_pair {|k,v| h['points'] = h['points'].to_s}}
+  result.each {|h| h.each_pair {|k,v| h['id'] = h['id'].to_s}}
+  result.each do |nat|
+  Medal.update(nat)
+  end
+  Medal.sort(result)
+  end
 
   def self.sort(params)
    sort = params.to_a
