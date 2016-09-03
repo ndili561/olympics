@@ -1,6 +1,8 @@
 require('pg')
 require_relative('../db/sql_runner')
 require 'json/ext'
+require 'pry'
+
 
 class Nation
   
@@ -47,7 +49,8 @@ end
 
   def self.update(params)
    run ( "UPDATE nations SET 
-    nation='#{params['nation']}', points='#{params['points']}' WHERE id=#{params['id']}")
+    nation='#{params['nation']}', points='0' WHERE id=#{params['id']}")
+ 
   end
 
   def self.find(id)
